@@ -10,6 +10,16 @@ import (
 func main() {
 	//TIP <p>Press <shortcut actionId="ShowIntentionActions"/> when your caret is at the underlined text
 	// to see how GoLand suggests fixing the warning.</p><p>Alternatively, if available, click the lightbulb to view possible fixes.</p>
+
+	// простой однострочный комментарий
+
+	/*
+		Для чего нужны комментарии:
+			Для объяснения сложных участков кода.
+			Для описания функций и их назначения.
+			Для временного отключения кода при отладке.
+	*/
+
 	fmt.Print("Many\n")
 	fmt.Print("Thanks\n")
 	fmt.Print("To")
