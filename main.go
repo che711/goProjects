@@ -10,12 +10,43 @@ import (
 func main() {
 	//TIP <p>Press <shortcut actionId="ShowIntentionActions"/> when your caret is at the underlined text
 	// to see how GoLand suggests fixing the warning.</p><p>Alternatively, if available, click the lightbulb to view possible fixes.</p>
-	s := "gopher"
-	fmt.Printf("\nHello and welcome, %s!\n", s)
 
-	for i := 1; i <= 5; i++ {
-		//TIP <p>To start your debugging session, right-click your code in the editor and select the Debug option.</p> <p>We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-		// for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.</p>
-		fmt.Println("i =", 100/i)
-	}
+	// простой однострочный комментарий
+
+	/*
+		Для чего нужны комментарии:
+			Для объяснения сложных участков кода.
+			Для описания функций и их назначения.
+			Для временного отключения кода при отладке.
+	*/
+
+	fmt.Print("Many\n")
+	fmt.Print("Thanks\n")
+	fmt.Print("To")
+	fmt.Print("All")
+	fmt.Print("My")
+	fmt.Print("Students")
+
+	fmt.Print("\n")
+	fmt.Println("Hello", "my", "dear", "friends")
+
+	fmt.Println("*")
+	fmt.Println("**")
+	fmt.Println("***")
+	fmt.Println("****")
+	fmt.Println("*****")
+	fmt.Println("******")
+	fmt.Println("*******")
+
+	// 1 вариант
+	var a string = "строка a"
+	fmt.Println(a)
+
+	// 2 вариант
+	var b string // пустая строка ""
+	fmt.Println(b)
+
+	// 3 вариант
+	c := "строка c"
+	fmt.Println(c)
 }
