@@ -37,4 +37,16 @@ func main() {
 	fmt.Println("*****")
 	fmt.Println("******")
 	fmt.Println("*******")
+
+	// 1 вариант
+	var a string = "строка a"
+	fmt.Println(a)
+
+	// 2 вариант
+	var b string // пустая строка ""
+	fmt.Println(b)
+
+	// 3 вариант
+	c := "строка c"
+	fmt.Println(c)
 }
