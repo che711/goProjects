@@ -29,4 +29,12 @@ func main() {
 
 	fmt.Print("\n")
 	fmt.Println("Hello", "my", "dear", "friends")
+
+	fmt.Println("*")
+	fmt.Println("**")
+	fmt.Println("***")
+	fmt.Println("****")
+	fmt.Println("*****")
+	fmt.Println("******")
+	fmt.Println("*******")
 }
