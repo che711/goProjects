@@ -20,23 +20,23 @@ func main() {
 			Для временного отключения кода при отладке.
 	*/
 
-	fmt.Print("Many\n")
-	fmt.Print("Thanks\n")
-	fmt.Print("To")
-	fmt.Print("All")
-	fmt.Print("My")
-	fmt.Print("Students")
-
-	fmt.Print("\n")
-	fmt.Println("Hello", "my", "dear", "friends")
-
-	fmt.Println("*")
-	fmt.Println("**")
-	fmt.Println("***")
-	fmt.Println("****")
-	fmt.Println("*****")
-	fmt.Println("******")
-	fmt.Println("*******")
+	//fmt.Print("Many\n")
+	//fmt.Print("Thanks\n")
+	//fmt.Print("To")
+	//fmt.Print("All")
+	//fmt.Print("My")
+	//fmt.Print("Students")
+	//
+	//fmt.Print("\n")
+	//fmt.Println("Hello", "my", "dear", "friends")
+	//
+	//fmt.Println("*")
+	//fmt.Println("**")
+	//fmt.Println("***")
+	//fmt.Println("****")
+	//fmt.Println("*****")
+	//fmt.Println("******")
+	//fmt.Println("*******")
 
 	// 1 вариант
 	var a string = "строка"
@@ -48,6 +48,9 @@ func main() {
 
 	// 3 вариант
 	c := "строка"
+	fmt.Println(c)
+
+	c = "new line c"
 	fmt.Println(c)
 
 }
