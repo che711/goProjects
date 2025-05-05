@@ -14,27 +14,43 @@ func main() {
 	// простой однострочный комментарий
 
 	/*
-	Для чего нужны комментарии:
-		Для объяснения сложных участков кода.
-		Для описания функций и их назначения.
-		Для временного отключения кода при отладке.
+		Для чего нужны комментарии:
+			Для объяснения сложных участков кода.
+			Для описания функций и их назначения.
+			Для временного отключения кода при отладке.
 	*/
 
-	fmt.Print("Many\n")
-	fmt.Print("Thanks\n")
-	fmt.Print("To")
-	fmt.Print("All")
-	fmt.Print("My")
-	fmt.Print("Students")
+	//fmt.Print("Many\n")
+	//fmt.Print("Thanks\n")
+	//fmt.Print("To")
+	//fmt.Print("All")
+	//fmt.Print("My")
+	//fmt.Print("Students")
+	//
+	//fmt.Print("\n")
+	//fmt.Println("Hello", "my", "dear", "friends")
+	//
+	//fmt.Println("*")
+	//fmt.Println("**")
+	//fmt.Println("***")
+	//fmt.Println("****")
+	//fmt.Println("*****")
+	//fmt.Println("******")
+	//fmt.Println("*******")
 
-	fmt.Print("\n")
-	fmt.Println("Hello", "my", "dear", "friends")
+	// 1 вариант
+	var a string = "строка"
+	fmt.Println(a)
 
-	fmt.Println("*")
-	fmt.Println("**")
-	fmt.Println("***")
-	fmt.Println("****")
-	fmt.Println("*****")
-	fmt.Println("******")
-	fmt.Println("*******")
+	// 2 вариант
+	var b string // пустая строка ""
+	fmt.Println(b)
+
+	// 3 вариант
+	c := "строка"
+	fmt.Println(c)
+
+	c = "new line c"
+	fmt.Println(c)
+
 }
