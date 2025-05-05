@@ -46,6 +46,7 @@ func main() {
 	fmt.Println(b, c, d)
 
 	// 3 вариант
-	e := "строка из переменной e"
+	f, e := "new_test", "test"
 	fmt.Println(e)
+	fmt.Println(f)
 }
