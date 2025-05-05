@@ -49,4 +49,16 @@ func main() {
 	f, e := "new_test", "test"
 	fmt.Println(e)
 	fmt.Println(f)
+
+	var someText string = ""
+	fmt.Println("some text: ", someText)
+
+	someText = "new text"
+	fmt.Println("some text: ", someText)
+
+	moreText := someText
+	fmt.Println("more text: ", moreText)
+
+	fmt.Println("")
+
 }
