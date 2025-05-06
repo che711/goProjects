@@ -8,8 +8,6 @@ import (
 // the <icon src="AllIcons.Actions.Execute"/> icon in the gutter and select the <b>Run</b> menu item from here.</p>
 
 func main() {
-	//TIP <p>Press <shortcut actionId="ShowIntentionActions"/> when your caret is at the underlined text
-	// to see how GoLand suggests fixing the warning.</p><p>Alternatively, if available, click the lightbulb to view possible fixes.</p>
 
 	// простой однострочный комментарий
 
@@ -39,18 +37,28 @@ func main() {
 	//fmt.Println("*******")
 
 	// 1 вариант
-	var a string = "строка"
+	const a = "строка"
+	//a = 'test_msg'
 	fmt.Println(a)
 
 	// 2 вариант
-	var b string // пустая строка ""
-	fmt.Println(b)
+	var b, c, d string // пустая строка ""
+	fmt.Println(b, c, d)
 
 	// 3 вариант
-	c := "строка"
-	fmt.Println(c)
+	f, e := "new_test", "test"
+	fmt.Println(e)
+	fmt.Println(f)
 
-	c = "new line c"
-	fmt.Println(c)
+	var someText string = ""
+	fmt.Println("some text: ", someText)
+
+	someText = "new text"
+	fmt.Println("some text: ", someText)
+
+	moreText := someText
+	fmt.Println("more text: ", moreText)
+
+	fmt.Println("")
 
 }
