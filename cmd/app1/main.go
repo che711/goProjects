@@ -91,7 +91,7 @@ func main() {
 
 	someEmojis := "😀 😃 😄 😁 😆 😅 😂 🤣"
 	someHieroglyphs := "𓀀 𓀁 𓀲 𓀕 𓀖 𓀗 𓀘 𓀙 "
-	hieroglyph := '𓀙'
+	hieroglyph := '𓀙' // одинарные кавычки
 
 	fmt.Println(someEmojis)
 	fmt.Println("\n")
