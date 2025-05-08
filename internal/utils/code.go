@@ -1,6 +1,10 @@
 package utils
 
-import "fmt"
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
 
 func Reverse(s string) string {
 	runes := []rune(s)
@@ -139,4 +143,39 @@ func JustCode() {
 	fmt.Println("\n")
 	var symbol rune = 'A'
 	fmt.Println(symbol)
+}
+
+func LearningScan() {
+	var word1, word2 string
+
+	fmt.Println("Введите два слова, разделенные пробелом:")
+
+	/*
+		cчитывает два слова разделенные пробелом и сохраняет их в переменные
+		cимвол амперсанд (&) перед переменной возвращает ее текущий адрес в оперативной памяти ->
+		чтобы сохранить пользовательский ввод в переменную X, нужно передать ее в функцию fmt.Scan() с амперсандом (&) перед ней.
+	*/
+
+	fmt.Scan(&word1, &word2)
+
+	fmt.Println("Вы ввели:", word1, word2)
+}
+
+func Bufio() {
+	// Создаем новый reader чтобы считывать строки из консоли
+	reader := bufio.NewReader(os.Stdin)
+
+	fmt.Println("Введите предложение:")
+
+	// Считываем строку до символа первого нажатия Enter
+	input, _ := reader.ReadString('\n')
+
+	// Выводим считанную строку
+	fmt.Println("Вы ввели:", input)
+}
+
+func Exam() {
+	var name string
+	fmt.Scan(&name)
+	fmt.Println("Привет, ", name)
 }

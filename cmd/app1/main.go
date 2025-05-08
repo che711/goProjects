@@ -15,6 +15,14 @@ func main() {
 	fmt.Println("Original:", str)
 	fmt.Println("Reversed:", reversed)
 
-	utils.JustCode()
-
+	//utils.JustCode()
+	//
+	//fmt.Println("\n")
+	//utils.LearningScan()
+	//
+	//fmt.Println("\n")
+	//utils.Bufio()
+	//
+	fmt.Println("\n")
+	utils.Exam()
 }
