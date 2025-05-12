@@ -175,7 +175,7 @@ func Bufio() {
 }
 
 func Exam() {
-	var name string
-	fmt.Scan(&name)
-	fmt.Println("Привет, ", name)
+	reader := bufio.NewReader(os.Stdin)
+	input, _ := reader.ReadString('\n')
+	fmt.Println(input)
 }
