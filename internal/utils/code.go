@@ -175,7 +175,18 @@ func Bufio() {
 }
 
 func Exam() {
-	reader := bufio.NewReader(os.Stdin)
-	input, _ := reader.ReadString('\n')
-	fmt.Println(input)
+	//var name string
+	//fmt.Scan(&name)
+	//fmt.Println("Привет, ", name)
+
+	//reader := bufio.NewReader(os.Stdin)
+	//input, _ := reader.ReadString('\n')
+	//fmt.Println(input)
+
+	//one, two, three, four = bufio.NewReader(os.Stdin)
+	//fmt.Print(four, three, two, one)
+
+	var a, b, c, d int
+	fmt.Scan(&a, &b, &c, &d)
+	fmt.Println(d, c, b, a)
 }
