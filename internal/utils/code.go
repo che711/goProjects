@@ -202,12 +202,11 @@ func Exam() {
 	//fmt.Println(word_b)
 	//fmt.Println(word_a)
 
-	var a, b, c, d, e string
-	fmt.Scan(&a, &b, &c, &d, &e)
+	var a, b int
+	fmt.Scan(&a, &b)
 
-	fmt.Println(e)
-	fmt.Println(d)
-	fmt.Println(c)
-	fmt.Println(b)
-	fmt.Println(a)
+	fmt.Println("Сумма: ", a+b)
+	fmt.Println("Разность: ", a-b)
+	fmt.Println("Умножение: ", a*b)
+	fmt.Println("Деление: ", a/b)
 }
