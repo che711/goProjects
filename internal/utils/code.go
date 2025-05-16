@@ -202,12 +202,41 @@ func Exam() {
 	//fmt.Println(word_b)
 	//fmt.Println(word_a)
 
-	var a, b, c, d, e string
-	fmt.Scan(&a, &b, &c, &d, &e)
+	var one int = 10
+	var two float64 = 3.5
 
-	fmt.Println(e)
-	fmt.Println(d)
-	fmt.Println(c)
-	fmt.Println(b)
+	// Преобразуем целое число `а` в число с плавающей точкой
+	sum := float64(one) + two
+	difference := float64(one) - two
+	product := float64(one) * two
+	quotient := float64(one) / two
+
+	fmt.Println(5 % 2)
+	fmt.Println("Cумма:", sum)
+	fmt.Println("Разность:", difference)
+	fmt.Println("Произведение:", product)
+	fmt.Println("Частное:", quotient)
+
+	a := 10
+
+	// порядок операции важен. ++a, --a и a- не существуют в Go.
+	a--
 	fmt.Println(a)
+	fmt.Println(-a)
+
+	a++
+	fmt.Println(a)
+	fmt.Println(-a)
+
+	//	var a, b float32
+	//	fmt.Scan(&a, &b)
+	//
+	//	fmt.Println("Сумма: ", a+b)
+	//	fmt.Println("Разность: ", a-b)
+	//	fmt.Println("Умножение: ", a*b)
+	//	fmt.Println("Деление: ", a/b)
+
+	c := 256
+	g := int8(c)
+	fmt.Println("Value g:", g)
 }
