@@ -247,8 +247,28 @@ func Exam() {
 	//e := d % b
 	////fmt.Println('\n')
 	//fmt.Println(e)
-	a := 10.4
-	b := int(a)
-	fmt.Println(int8(int32(int64(b))))
+	//a := 10.4
+	//b := int(a)
+	//fmt.Println(int8(int32(int64(b))))
+	//a := 100000000000.4
+	//b := int(a)
+	//fmt.Println("Result of different task: ")
+	//fmt.Println(int8(int32(int64(b))))
+
+	var distance float64
+	var time int
+
+	// Чтение входных данных
+	_, err := fmt.Scan(&distance, &time)
+	if err != nil {
+		fmt.Println("Ошибка при чтении входных данных:", err)
+		return
+	}
+
+	// Вычисление скорости
+	speed := distance / float64(time)
+
+	// Вывод результата
+	fmt.Println(speed)
 
 }
