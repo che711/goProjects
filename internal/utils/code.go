@@ -217,17 +217,17 @@ func Exam() {
 	fmt.Println("Произведение:", product)
 	fmt.Println("Частное:", quotient)
 
-	a := 10
-
-	// порядок операции важен. ++a, --a и a- не существуют в Go.
-	a--
-	fmt.Println(a)
-	fmt.Println(-a)
-
-	a++
-	fmt.Println(a)
-	fmt.Println(-a)
-
+	//a := 10
+	//
+	//// порядок операции важен. ++a, --a и a- не существуют в Go.
+	//a--
+	//fmt.Println(a)
+	//fmt.Println(-a)
+	//
+	//a++
+	//fmt.Println(a)
+	//fmt.Println(-a)
+	//
 	//	var a, b float32
 	//	fmt.Scan(&a, &b)
 	//
@@ -236,7 +236,16 @@ func Exam() {
 	//	fmt.Println("Умножение: ", a*b)
 	//	fmt.Println("Деление: ", a/b)
 
-	c := 256
-	g := int8(c)
-	fmt.Println("Value g:", g)
+	//c := 256
+	//g := int8(c)
+	//fmt.Println("Value g:", g)
+
+	a := 10
+	b := (1 + 2 + 3 - 2 - 2) * 10 * (100 % 90)
+	c := a * 10
+	d := c * a / 2
+	e := d % b
+	//fmt.Println('\n')
+	fmt.Println(e)
+
 }
