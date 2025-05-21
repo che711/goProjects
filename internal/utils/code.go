@@ -239,13 +239,16 @@ func Exam() {
 	//c := 256
 	//g := int8(c)
 	//fmt.Println("Value g:", g)
-
-	a := 10
-	b := (1 + 2 + 3 - 2 - 2) * 10 * (100 % 90)
-	c := a * 10
-	d := c * a / 2
-	e := d % b
-	//fmt.Println('\n')
-	fmt.Println(e)
+	//
+	//a := 10
+	//b := (1 + 2 + 3 - 2 - 2) * 10 * (100 % 90)
+	//c := a * 10
+	//d := c * a / 2
+	//e := d % b
+	////fmt.Println('\n')
+	//fmt.Println(e)
+	a := 10.4
+	b := int(a)
+	fmt.Println(int8(int32(int64(b))))
 
 }
