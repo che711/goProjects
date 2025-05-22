@@ -217,17 +217,17 @@ func Exam() {
 	fmt.Println("Произведение:", product)
 	fmt.Println("Частное:", quotient)
 
-	a := 10
-
-	// порядок операции важен. ++a, --a и a- не существуют в Go.
-	a--
-	fmt.Println(a)
-	fmt.Println(-a)
-
-	a++
-	fmt.Println(a)
-	fmt.Println(-a)
-
+	//a := 10
+	//
+	//// порядок операции важен. ++a, --a и a- не существуют в Go.
+	//a--
+	//fmt.Println(a)
+	//fmt.Println(-a)
+	//
+	//a++
+	//fmt.Println(a)
+	//fmt.Println(-a)
+	//
 	//	var a, b float32
 	//	fmt.Scan(&a, &b)
 	//
@@ -236,7 +236,39 @@ func Exam() {
 	//	fmt.Println("Умножение: ", a*b)
 	//	fmt.Println("Деление: ", a/b)
 
-	c := 256
-	g := int8(c)
-	fmt.Println("Value g:", g)
+	//c := 256
+	//g := int8(c)
+	//fmt.Println("Value g:", g)
+	//
+	//a := 10
+	//b := (1 + 2 + 3 - 2 - 2) * 10 * (100 % 90)
+	//c := a * 10
+	//d := c * a / 2
+	//e := d % b
+	////fmt.Println('\n')
+	//fmt.Println(e)
+	//a := 10.4
+	//b := int(a)
+	//fmt.Println(int8(int32(int64(b))))
+	//a := 100000000000.4
+	//b := int(a)
+	//fmt.Println("Result of different task: ")
+	//fmt.Println(int8(int32(int64(b))))
+
+	var distance float64
+	var time int
+
+	// Чтение входных данных
+	_, err := fmt.Scan(&distance, &time)
+	if err != nil {
+		fmt.Println("Ошибка при чтении входных данных:", err)
+		return
+	}
+
+	// Вычисление скорости
+	speed := distance / float64(time)
+
+	// Вывод результата
+	fmt.Println(speed)
+
 }
