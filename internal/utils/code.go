@@ -89,18 +89,18 @@ func JustCode() {
 	fmt.Println(yes)
 	var no bool = false
 	fmt.Println(no)
-	fmt.Println("\n")
+	fmt.Println('\n')
 
 	someEmojis := "😀 😃 😄 😁 😆 😅 😂 🤣"
 	someHieroglyphs := "𓀀 𓀁 𓀲 𓀕 𓀖 𓀗 𓀘 𓀙 "
 	hieroglyph := '𓀙' // одинарные кавычки!!
 
 	fmt.Println(someEmojis)
-	fmt.Println("\n")
+	fmt.Println('\n')
 	fmt.Println(someHieroglyphs)
-	fmt.Println("\n")
+	fmt.Println('\n')
 	fmt.Println(hieroglyph)
-	fmt.Println("\n")
+	fmt.Println('\n')
 
 	// Базовые (встроенные) типы данных
 	basicTypes := []interface{}{
@@ -140,7 +140,7 @@ func JustCode() {
 	fmt.Println("- Каналы (chan int)")
 	fmt.Println("- Отображения (map[string]int)")
 
-	fmt.Println("\n")
+	fmt.Println('\n')
 	var symbol rune = 'A'
 	fmt.Println(symbol)
 }
@@ -258,17 +258,12 @@ func Exam() {
 	var distance float64
 	var time int
 
-	// Чтение входных данных
 	_, err := fmt.Scan(&distance, &time)
 	if err != nil {
 		fmt.Println("Ошибка при чтении входных данных:", err)
 		return
 	}
-
-	// Вычисление скорости
 	speed := distance / float64(time)
-
-	// Вывод результата
 	fmt.Println(speed)
 
 }
