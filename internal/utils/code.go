@@ -91,4 +91,13 @@ func Lines() {
 
 	wordsTogether = word_1 + " " + word_2
 	fmt.Println(wordsTogether)
+
+	var word1 string = "Hello"
+	var word2 string = "my"
+	var word3 string = "dear"
+	var word4 string = "world"
+
+	wordsTogether2 := word1 + " " + word2 + " " + word3 + " " + word4 + "!"
+
+	fmt.Println(wordsTogether2)
 }
