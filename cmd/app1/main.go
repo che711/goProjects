@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"goProjects/internal/utils"
 )
 
@@ -10,10 +9,10 @@ import (
 
 func main() {
 
-	str := "Hello, Go!"
-	reversed := utils.Reverse(str)
-	fmt.Println("Original:", str)
-	fmt.Println("Reversed:", reversed)
+	// str := "Hello, Go!"
+	// reversed := utils.Reverse(str)
+	// fmt.Println("Original:", str)
+	// fmt.Println("Reversed:", reversed)
 
 	//utils.JustCode()
 	//
@@ -23,6 +22,11 @@ func main() {
 	//fmt.Println("\n")
 	//utils.Bufio()
 	//
-	fmt.Println("\n")
-	utils.Exam()
+	// fmt.Println("\n")
+	// utils.Exam()
+
+	// utils.Calculator()
+
+	utils.Lines()
+
 }
