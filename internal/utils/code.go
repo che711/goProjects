@@ -83,21 +83,13 @@ func Lines() {
 	var word_1 string = "Hello"
 	var word_2 string = "World"
 
-	wordsTogether := word_1 + " " + word_2
-	fmt.Println(wordsTogether)
+	wordsTogether1 := word_1 + " " + word_2
+	fmt.Println(wordsTogether1)
 
-	wordsTogether = word_1 + word_2
-	fmt.Println(wordsTogether)
-
-	wordsTogether = word_1 + " " + word_2
-	fmt.Println(wordsTogether)
-
-	var word1 string = "Hello"
-	var word2 string = "my"
-	var word3 string = "dear"
-	var word4 string = "world"
-
-	wordsTogether2 := word1 + " " + word2 + " " + word3 + " " + word4 + "!"
-
+	wordsTogether2 := word_1 + word_2
 	fmt.Println(wordsTogether2)
+
+	wordsTogether3 := word_1 + " " + word_2
+	fmt.Println(wordsTogether3)
+
 }
