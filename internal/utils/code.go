@@ -93,3 +93,14 @@ func Lines() {
 	fmt.Println(wordsTogether3)
 
 }
+
+
+func GetValues() (int, string) {
+    return 50, "golang"
+}
+
+
+func TestGetValues() {
+    f, g := GetValues()  // Присвоение двух переменных
+	fmt.Println("f =", f, "g =", g) // Вывод значений переменных
+}
