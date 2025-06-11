@@ -65,3 +65,31 @@ func Exam() {
 	speed := distance / float64(time)
 	fmt.Printf("Скорость: %.2f км/ч\n", speed)
 }
+
+func Calculator() {
+
+	var a, b float32
+
+	fmt.Scan(&a, &b)
+
+	fmt.Println("Сложение:", a+b)
+	fmt.Println("Вычитание:", a-b)
+	fmt.Println("Деление:", a/b)
+	fmt.Println("Умножение:", a*b)
+}
+
+func Lines() {
+
+	var word_1 string = "Hello"
+	var word_2 string = "World"
+
+	wordsTogether1 := word_1 + " " + word_2
+	fmt.Println(wordsTogether1)
+
+	wordsTogether2 := word_1 + word_2
+	fmt.Println(wordsTogether2)
+
+	wordsTogether3 := word_1 + " " + word_2
+	fmt.Println(wordsTogether3)
+
+}
