@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+    "unicode/utf8"
 )
 
 func Reverse(s string) string {
@@ -92,6 +93,11 @@ func Lines() {
 	wordsTogether3 := word_1 + " " + word_2
 	fmt.Println(wordsTogether3)
 
+	text := "Этот текст состоит из 74 байт и 43 символов"
+    var lengthInBytes int = len(text)
+    var lengthInRunes int = utf8.RuneCountInString(text)
+    fmt.Println("len(text): ", lengthInBytes, "and utf8.RuneCountInString(text): ", lengthInRunes)
+
 }
 
 
@@ -101,6 +107,8 @@ func GetValues() (int, string) {
 
 
 func TestGetValues() {
-    f, g := GetValues()  // Присвоение двух переменных
-	fmt.Println("f =", f, "g =", g) // Вывод значений переменных
+    f, g := GetValues()  
+	fmt.Println("f =", f, "g =", g)
+
+
 }

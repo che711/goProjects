@@ -29,6 +29,5 @@ func main() {
 
 	utils.Lines()
 
-	utils.TestGetValues()
 
 }
