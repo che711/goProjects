@@ -27,7 +27,9 @@ func main() {
 
 	// utils.Calculator()
 
-	utils.Lines()
+	// utils.Lines()
+
+	utils.TestGetValues()
 
 
 }
