@@ -96,7 +96,8 @@ func Lines() {
 	text := "Этот текст состоит из 74 байт и 43 символов"
     var lengthInBytes int = len(text)
     var lengthInRunes int = utf8.RuneCountInString(text)
-    fmt.Println("len(text): ", lengthInBytes, "and utf8.RuneCountInString(text): ", lengthInRunes)
+    fmt.Println("len(text): ", lengthInBytes, "and utf8.RuneCountInString(text): ", 
+	lengthInRunes)
 
 }
 
