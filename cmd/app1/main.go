@@ -26,11 +26,10 @@ func main() {
 	// utils.Exam()
 
 	// utils.Calculator()
-	
-	// utils.TestGetValues()
-	
-	utils.Lines()
 
+	// utils.Lines()
+	// utils.Runes()
 
+	utils.ExamProgram()
 
 }

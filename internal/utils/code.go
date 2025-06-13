@@ -131,3 +131,26 @@ func TestGetValues() {
 	fmt.Println("f =", f, "g =", g)
 
 }
+
+func Runes() {
+
+	var ch2 rune = 'A' * 100
+	// var ch3 rune = "A" * 10
+	// var ch4 rune = 'UA' / 100 * 2
+	// var ch5 rune = 'A' - "B"
+	var ch6 rune = 'A' / 'B'
+	var ch7 rune = 'A' * 2
+	var ch8 rune = 'A' + 1
+
+	fmt.Println("ch2 =", ch2, "ch6 =", ch6, "ch7 =", ch7, "ch8 =", ch8)
+
+	var r rune = 'F' + 5
+	fmt.Println(string(r))
+}
+
+func ExamProgram() {
+	var b string
+	fmt.Scan(&b)
+	fmt.Println(b)
+
+}
