@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-    "unicode/utf8"
+	"unicode/utf8"
 )
 
 func Reverse(s string) string {
@@ -94,21 +94,40 @@ func Lines() {
 	fmt.Println(wordsTogether3)
 
 	text := "Этот текст состоит из 74 байт и 43 символов"
-    var lengthInBytes int = len(text)
-    var lengthInRunes int = utf8.RuneCountInString(text)
-    fmt.Println("len(text): ", lengthInBytes, "and utf8.RuneCountInString(text): ", lengthInRunes)
+	var lengthInBytes int = len(text)
+	var lengthInRunes int = utf8.RuneCountInString(text)
+	fmt.Println("len(text): ", lengthInBytes, "and utf8.RuneCountInString(text): ",
+		lengthInRunes)
+
+	// Если нужно вычислить длину строки, содержащей только английские буквы,
+	// символы и цифры, достаточно использовать функцию len(),
+	// так как каждый из этих символов занимает один байт.
+
+	// Если требуется узнать длину строки, в которой присутствуют буквы других
+	// языков, такие как русские или арабские, следует применять
+	// функцию utf8.RuneCountInString() из пакета "unicode/utf8".
+
+	var r rune = 'B' // 'B' имеет код 66 в Unicode
+	fmt.Println("Input r + 1: ", r+1)
+	fmt.Println("Input r - 1: ", r-1)
+
+	var value_r rune = 'Y'
+	fmt.Println((value_r))
+
+	var r1 rune = 'A'    // 'A' -> 65 в Unicode
+	var r2 rune = r1 + 1 // 'B' -> 66 в Unicode
+	var r3 rune = r2 + 1 // 'C' -> 67 в Unicode
+
+	fmt.Println(string(r1) + string(r2) + string(r3)) // выведет "ABC"
 
 }
-
 
 func GetValues() (int, string) {
-    return 50, "golang"
+	return 50, "golang"
 }
 
-
 func TestGetValues() {
-    f, g := GetValues()  
+	f, g := GetValues()
 	fmt.Println("f =", f, "g =", g)
-
 
 }
