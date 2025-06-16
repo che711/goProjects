@@ -31,6 +31,7 @@ func main() {
 	// utils.Runes()
 
 	// utils.ExamProgram()
-	utils.ChecLengthOfWord() 
+	// utils.ChecLengthOfWord() 
+	utils.CommonWord()
 
 }
