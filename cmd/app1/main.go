@@ -30,6 +30,7 @@ func main() {
 	// utils.Lines()
 	// utils.Runes()
 
-	utils.ExamProgram()
+	// utils.ExamProgram()
+	utils.ChecLengthOfWord() 
 
 }
