@@ -154,3 +154,12 @@ func ExamProgram() {
 	fmt.Println(b)
 
 }
+
+func ChecLengthOfWord() {
+	var word string
+
+	fmt.Scan(&word)
+
+	fmt.Println(len(word), utf8.RuneCountInString(word))
+}
+
