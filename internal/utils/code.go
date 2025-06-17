@@ -157,9 +157,17 @@ func ExamProgram() {
 
 func ChecLengthOfWord() {
 	var word string
-
 	fmt.Scan(&word)
-
 	fmt.Println(len(word), utf8.RuneCountInString(word))
 }
+
+
+func CommonWord() {
+	var word_1 string
+	var word_2 string
+	var word_3 string
+	fmt.Scan(&word_1, &word_2, &word_3)
+	fmt.Print(word_1, word_2, word_3)
+}
+
 
