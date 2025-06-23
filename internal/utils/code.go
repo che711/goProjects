@@ -176,11 +176,10 @@ func SymbolTransform() {
 	fmt.Println(string(num1 + num2))
 }
 
-
 func IntToUnicode() {
 	var num_1 int
 	var num_2 int
 	var num_3 int
 	fmt.Scan(&num_1, &num_2, &num_3)
-	fmt.Println(utf8.RuneCountInString(num_1+num_2+num_3))
+	fmt.Print(string(num_1),string(num_2), string(num_3))
 }
