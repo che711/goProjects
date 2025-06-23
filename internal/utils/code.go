@@ -170,4 +170,11 @@ func CommonWord() {
 	fmt.Print(word_1, word_2, word_3)
 }
 
+func SymbolTransform(){
+	var num1 int
+	var num2 int
+	fmt.Scan(&num1, &num2)
+	fmt.Println(string(num1+num2))
+}
+
 
