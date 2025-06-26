@@ -161,7 +161,6 @@ func ChecLengthOfWord() {
 	fmt.Println(len(word), utf8.RuneCountInString(word))
 }
 
-
 func CommonWord() {
 	var word_1 string
 	var word_2 string
@@ -170,11 +169,17 @@ func CommonWord() {
 	fmt.Print(word_1, word_2, word_3)
 }
 
-func SymbolTransform(){
+func SymbolTransform() {
 	var num1 int
 	var num2 int
 	fmt.Scan(&num1, &num2)
-	fmt.Println(string(num1+num2))
+	fmt.Println(string(num1 + num2))
 }
 
-
+func IntToUnicode() {
+	var num_1 int
+	var num_2 int
+	var num_3 int
+	fmt.Scan(&num_1, &num_2, &num_3)
+	fmt.Print(string(num_1),string(num_2), string(num_3))
+}
