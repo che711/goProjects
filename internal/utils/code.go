@@ -191,7 +191,7 @@ func BoolsData() {
 	// объявляем четыре переменные типа bool
 	var equal, notEqual, firstIsBigger, secondIsBigger bool
 
-	//сравниваем числа между собой и помещаем результат в переменные
+	// сравниваем числа между собой и помещаем результат в переменные
 	// приоритет операторо сравнения выше операторов присваивания
 	equal = number1 == number2
 	notEqual = number1 != number2
@@ -203,4 +203,33 @@ func BoolsData() {
 	fmt.Println("Числа не равны?", notEqual)
 	fmt.Println("Первое число больше второго?", firstIsBigger)
 	fmt.Println("Второе число больше первого?", secondIsBigger)	
+}
+
+func Comparing(){
+	var number1, number2, number3 int
+	fmt.Scan(&number1, &number2, &number3)
+
+	// объявляем переменную логического типа
+	var isFirstBiggest bool
+
+	// приоритет опрератора && ниже чем у операторов сравнения
+	// поэтому окружать сравниния не требуется
+
+	isFirstBiggest = number1 > number2 && number1 > number3
+
+	fmt.Println("Первое число самое большое?", isFirstBiggest)
+}
+
+func ComparingTwo(){
+	var number1, number2, number3 int
+	fmt.Scan(&number1, &number2, &number3)
+
+	var firstHasPair, secondHasPair bool
+
+	// приоритет оператора || ниже чем у операторов сравниния
+	// поэтому скобки тоже не нужны
+	firstHasPair = number1 == number2 || number1 == number3
+	secondHasPair = number2 == number3 || number2 == number1
+
+	fmt.Println("Есть одинаковые числа среди трех указанных чисел? ", firstHasPair || secondHasPair)
 }

@@ -35,6 +35,8 @@ func main() {
 	// utils.CommonWord()
 	// utils.SymbolTransform()
 	// utils.IntToUnicode()
-	utils.BoolsData()
+	// utils.BoolsData()
+	// utils.Comparing()
+	utils.ComparingTwo()
 
 }
