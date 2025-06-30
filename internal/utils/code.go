@@ -183,3 +183,20 @@ func IntToUnicode() {
 	fmt.Scan(&num_1, &num_2, &num_3)
 	fmt.Print(string(num_1),string(num_2), string(num_3))
 }
+
+func BoolsData() {
+	var number1, number2 int
+	fmt.Scan(&number1, &number2)
+
+	// объявляем четыре переменные типа bool
+	var equal, notEqual, firstIsBigger, secondIsBigger bool
+
+	//сравниваем числа между собой и помещаем результат в переменные
+	// приоритет операторо сравнения выше операторов присваивания
+	equal = number1 == number2
+	notEqual = number1 != number2
+	firstIsBigger = number1 > number2
+	secondIsBigger = number1 < number2
+
+	fmt.Println("Результаты сравнения:")
+}
