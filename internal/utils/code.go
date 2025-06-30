@@ -199,4 +199,8 @@ func BoolsData() {
 	secondIsBigger = number1 < number2
 
 	fmt.Println("Результаты сравнения:")
+	fmt.Println("Числа равны?", equal)
+	fmt.Println("Числа не равны?", notEqual)
+	fmt.Println("Первое число больше второго?", firstIsBigger)
+	fmt.Println("Второе число больше первого?", secondIsBigger)	
 }
