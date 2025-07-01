@@ -34,6 +34,9 @@ func main() {
 	// utils.ChecLengthOfWord()
 	// utils.CommonWord()
 	// utils.SymbolTransform()
-	utils.IntToUnicode()
+	// utils.IntToUnicode()
+	// utils.BoolsData()
+	// utils.Comparing()
+	utils.ComparingTwo()
 
 }

@@ -183,3 +183,53 @@ func IntToUnicode() {
 	fmt.Scan(&num_1, &num_2, &num_3)
 	fmt.Print(string(num_1),string(num_2), string(num_3))
 }
+
+func BoolsData() {
+	var number1, number2 int
+	fmt.Scan(&number1, &number2)
+
+	// объявляем четыре переменные типа bool
+	var equal, notEqual, firstIsBigger, secondIsBigger bool
+
+	// сравниваем числа между собой и помещаем результат в переменные
+	// приоритет операторо сравнения выше операторов присваивания
+	equal = number1 == number2
+	notEqual = number1 != number2
+	firstIsBigger = number1 > number2
+	secondIsBigger = number1 < number2
+
+	fmt.Println("Результаты сравнения:")
+	fmt.Println("Числа равны?", equal)
+	fmt.Println("Числа не равны?", notEqual)
+	fmt.Println("Первое число больше второго?", firstIsBigger)
+	fmt.Println("Второе число больше первого?", secondIsBigger)	
+}
+
+func Comparing(){
+	var number1, number2, number3 int
+	fmt.Scan(&number1, &number2, &number3)
+
+	// объявляем переменную логического типа
+	var isFirstBiggest bool
+
+	// приоритет опрератора && ниже чем у операторов сравнения
+	// поэтому окружать сравниния не требуется
+
+	isFirstBiggest = number1 > number2 && number1 > number3
+
+	fmt.Println("Первое число самое большое?", isFirstBiggest)
+}
+
+func ComparingTwo(){
+	var number1, number2, number3 int
+	fmt.Scan(&number1, &number2, &number3)
+
+	var firstHasPair, secondHasPair bool
+
+	// приоритет оператора || ниже чем у операторов сравниния
+	// поэтому скобки тоже не нужны
+	firstHasPair = number1 == number2 || number1 == number3
+	secondHasPair = number2 == number3 || number2 == number1
+
+	fmt.Println("Есть одинаковые числа среди трех указанных чисел? ", firstHasPair || secondHasPair)
+}
