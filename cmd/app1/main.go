@@ -37,6 +37,7 @@ func main() {
 	// utils.IntToUnicode()
 	// utils.BoolsData()
 	// utils.Comparing()
-	utils.ComparingTwo()
+	// utils.ComparingTwo()
+	utils.CheckingNumber()
 
 }

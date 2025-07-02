@@ -233,3 +233,24 @@ func ComparingTwo(){
 
 	fmt.Println("Есть одинаковые числа среди трех указанных чисел? ", firstHasPair || secondHasPair)
 }
+
+func CheckingNumber(){
+	var a int
+	var b int
+	fmt.Scan(&a, &b)
+	
+	
+	var test_a, test_b int
+	test_a = a % 2
+	test_b = b % 2
+	fmt.Println(test_a, test_b)
+	
+	var  result_c bool 
+	// result_a = test_a < 1
+	// result_b = test_b < 1
+	// fmt.Println(result_a, result_a)
+	
+	result_c = test_a == 1 && test_b == 1
+	fmt.Println(result_c)
+
+}
