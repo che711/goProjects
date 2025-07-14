@@ -248,3 +248,10 @@ func CheckingNumber(){
 	result_c = test_a != 1 && test_b != 1
 	fmt.Println(result_c)
 }
+
+func AgeOfTeenager(){
+	var age_int int
+	fmt.Scan(&age_int)
+	result := age_int >= 13 && age_int <= 19
+	fmt.Println(result)
+}

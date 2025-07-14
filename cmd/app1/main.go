@@ -38,6 +38,7 @@ func main() {
 	// utils.BoolsData()
 	// utils.Comparing()
 	// utils.ComparingTwo()
-	utils.CheckingNumber()
+	// utils.CheckingNumber()
+	utils.AgeOfTeenager()
 
 }
