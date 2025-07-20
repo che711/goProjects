@@ -255,3 +255,5 @@ func AgeOfTeenager(){
 	result := age_int >= 13 && age_int <= 19
 	fmt.Println(result)
 }
+
+
