@@ -40,7 +40,7 @@ func main() {
 	// utils.ComparingTwo()
 	// utils.CheckingNumber()
 	// utils.AgeOfTeenager()
-	util.JustForFunc()
+	utils.JustForFunc()
 
 	
 }
