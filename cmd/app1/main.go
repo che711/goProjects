@@ -41,6 +41,4 @@ func main() {
 	// utils.CheckingNumber()
 	// utils.AgeOfTeenager()
 	utils.JustForFunc()
-
-	
 }
