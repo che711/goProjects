@@ -257,7 +257,5 @@ func AgeOfTeenager(){
 }
 
 func JustForFunc(){
-	var fun_var string
-	fmt.Scan(&fun_var)
-	fmt.Print(fun_var)
+	fmt.Print("Test messages")
 }
