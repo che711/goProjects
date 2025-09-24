@@ -258,4 +258,5 @@ func AgeOfTeenager(){
 
 func JustForFunc(){
 	fmt.Print("Test messages")
+	fmt.Print("\n")
 }
