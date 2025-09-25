@@ -256,7 +256,3 @@ func AgeOfTeenager(){
 	fmt.Println(result)
 }
 
-func JustForFunc(){
-	fmt.Print("Test messages")
-	fmt.Print("\n")
-}
