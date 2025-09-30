@@ -257,6 +257,9 @@ func AgeOfTeenager(){
 }
 
 func IfConditions(){
-	
+	age := 15
+	if age <18 {
+		fmt.Println("Your age less then 18! Don't entry")
+	}
 }
 
