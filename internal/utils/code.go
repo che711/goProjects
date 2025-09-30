@@ -256,3 +256,7 @@ func AgeOfTeenager(){
 	fmt.Println(result)
 }
 
+func IfConditions(){
+	
+}
+
