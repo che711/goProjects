@@ -257,6 +257,13 @@ func AgeOfTeenager(){
 }
 
 func IfConditions(){
-	
+	var age int
+	fmt.Println("Enter your age:")
+	fmt.Scan(&age)
+	if age <18 {
+		fmt.Println("Your age less then 18! Don't entry")
+	} else {
+		fmt.Println("Please, continue your journey")
+	}
 }
 
