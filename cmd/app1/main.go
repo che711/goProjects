@@ -40,5 +40,6 @@ func main() {
 	// utils.ComparingTwo()
 	// utils.CheckingNumber()
 	// utils.AgeOfTeenager()
-	utils.IfConditions()
+	//utils.IfConditions()
+	utils.IfElseConditions()
 }

@@ -267,3 +267,17 @@ func IfConditions(){
 	}
 }
 
+func IfElseConditions() {
+	
+	var age int
+	
+	fmt.Scan(&age)
+
+	if age <13 {
+		fmt.Println("You are a little yet")
+	} else if age < 18 {
+		fmt.Println("You're an teenager")
+	} else {
+		fmt.Println("Congrats! You are adult!")
+	}
+}
