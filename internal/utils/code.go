@@ -282,7 +282,3 @@ func IfElseConditions() {
 	}
 }
 
-func TestLover() {
-	
-}
-
