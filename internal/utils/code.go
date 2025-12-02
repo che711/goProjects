@@ -269,7 +269,7 @@ func IfConditions(){
 }
 
 func IfElseConditions() {
-	log.Println("\nThis is a IfElseConditions function")	
+	log.Println("\n\n\tThis is a IfElseConditions function")	
 	var age int
 
 	fmt.Scan(&age)
