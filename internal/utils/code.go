@@ -270,6 +270,27 @@ func IfConditions(){
 
 func IfElseConditions() {
 	log.Println("\n\n\tThis is a IfElseConditions function")	
+    log.Printf("Форматированное сообщение: %d", 42)
+	// С флагом для добавления даты/времени
+    log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
+    log.Println("Сообщение с метаданными")
+
+	// Запись в файл
+    file, err := os.OpenFile("app.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
+    if err != nil {
+        log.Fatal(err)
+    }
+    defer file.Close()
+    
+    log.SetOutput(file)
+    log.Println("Запись в файл")
+    
+    // Fatal выводит сообщение и завершает программу
+    // log.Fatal("Критическая ошибка")
+    
+    // Panic выводит сообщение и вызывает panic
+    // log.Panic("Паника")
+
 	var age int
 
 	fmt.Scan(&age)
