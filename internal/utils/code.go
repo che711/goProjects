@@ -6,6 +6,7 @@ import (
 	"os"
 	"unicode/utf8"
 	"log"
+	"log/slog"
 )
 
 func Reverse(s string) string {
@@ -303,5 +304,7 @@ func IfElseConditions() {
 		fmt.Println("Congrats! You are adult!")
 	}
 }
+
+func Logger
 
 
