@@ -269,10 +269,32 @@ func IfConditions(){
 }
 
 func IfElseConditions() {
-	log.Println("\n\n\tThis is a IfElseConditions function")	
-	var age int
+	log.Println("\n\n\tThis is a IfElseConditions function\n")	
+	log.Printf("\n")	
+	// С флагом для добавления даты/времени
+    log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
+    log.Println("Msg with metadata")
+	
+	// Запись в файл
+    file, err := os.OpenFile("app.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
+    if err != nil {
+		log.Fatal(err)
+    }
+    defer file.Close()
+    
+    log.SetOutput(file)
+    log.Println("Запись в файл")
+    
+    // Fatal выводит сообщение и завершает программу
+    log.Fatal("Критическая ошибка")
+    
+    // Panic выводит сообщение и вызывает panic
+    log.Panic("Паника")
+	
+	var age int = 34
+	log.Printf("Форматированное сообщение: %d", age)
 
-	fmt.Scan(&age)
+	// fmt.Scan(&age)
 	if age <13 {
 		fmt.Println("You are a little yet")
 	} else if age < 18 {
