@@ -41,7 +41,8 @@ func main() {
 	// utils.CheckingNumber()
 	// utils.AgeOfTeenager()
 	// utils.IfConditions()
-	utils.IfElseConditions()
-	
+	// utils.IfElseConditions()
+	utils.Logger()
+
 	
 }
