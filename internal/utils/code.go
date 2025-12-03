@@ -271,7 +271,6 @@ func IfConditions(){
 
 func IfElseConditions() {
 	var age int
-	log.Printf("Форматированное сообщение: %d", age)
 
 	fmt.Scan(&age)
 	if age <13 {
