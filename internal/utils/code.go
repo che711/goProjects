@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"unicode/utf8"
+	"log"
 )
 
 func Reverse(s string) string {
@@ -268,11 +269,10 @@ func IfConditions(){
 }
 
 func IfElseConditions() {
-	
+	log.Println("\n\n\tThis is a IfElseConditions function")	
 	var age int
-	
-	fmt.Scan(&age)
 
+	fmt.Scan(&age)
 	if age <13 {
 		fmt.Println("You are a little yet")
 	} else if age < 18 {
