@@ -300,10 +300,10 @@ func Logger() {
     log.Println("Запись в файл")
     
     // Fatal выводит сообщение и завершает программу
-    log.Fatal("Критическая ошибка")
+    // log.Fatal("Критическая ошибка")
     
     // Panic выводит сообщение и вызывает panic
-    log.Panic("Паника")
+    // log.Panic("Паника")
 
     // Текстовый вывод
     logger := slog.New(slog.NewTextHandler(os.Stdout, nil))
