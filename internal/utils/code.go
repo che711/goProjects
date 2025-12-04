@@ -6,6 +6,7 @@ import (
 	"os"
 	"unicode/utf8"
 	"log"
+	"log/slog"
 )
 
 func Reverse(s string) string {
@@ -269,6 +270,19 @@ func IfConditions(){
 }
 
 func IfElseConditions() {
+	var age int
+
+	fmt.Scan(&age)
+	if age <13 {
+		fmt.Println("You are a little yet")
+	} else if age < 18 {
+		fmt.Println("You're an teenager")
+	} else {
+		fmt.Println("Congrats! You are adult!")
+	}
+}
+
+func Logger() {
 	log.Println("\n\n\tThis is a IfElseConditions function\n")	
 	log.Printf("\n")	
 	// С флагом для добавления даты/времени
@@ -286,22 +300,35 @@ func IfElseConditions() {
     log.Println("Запись в файл")
     
     // Fatal выводит сообщение и завершает программу
-    log.Fatal("Критическая ошибка")
+    // log.Fatal("Критическая ошибка")
     
     // Panic выводит сообщение и вызывает panic
-    log.Panic("Паника")
-	
-	var age int = 34
-	log.Printf("Форматированное сообщение: %d", age)
+    // log.Panic("Паника")
 
-	// fmt.Scan(&age)
-	if age <13 {
-		fmt.Println("You are a little yet")
-	} else if age < 18 {
-		fmt.Println("You're an teenager")
-	} else {
-		fmt.Println("Congrats! You are adult!")
-	}
+    // Текстовый вывод
+    logger := slog.New(slog.NewTextHandler(os.Stdout, nil))
+    logger.Info("сообщение", "user", "john", "id", 123)
+    
+    // JSON вывод
+    jsonLogger := slog.New(slog.NewJSONHandler(os.Stdout, nil))
+    jsonLogger.Info("пользователь залогинен", "user", "john", "id", 123)
+    
+    // С настройками
+    handler := slog.NewJSONHandler(os.Stderr, &slog.HandlerOptions{
+        Level:     slog.LevelDebug,
+        AddSource: true,
+    })
+    logger = slog.New(handler)
+    
+    // Уровни логирования
+    logger.Debug("отладочное сообщение")
+    logger.Info("информационное сообщение")
+    logger.Warn("предупреждение")
+    logger.Error("ошибка", "err", "что-то сломалось")
+    
+    // Глобальный логгер
+    slog.SetDefault(logger)
+    slog.Info("использование глобального логгера")
 }
 
 
