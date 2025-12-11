@@ -329,6 +329,7 @@ func Logger() {
     // Глобальный логгер
     slog.SetDefault(logger)
     slog.Info("использование глобального логгера")
+	
 }
 
 
