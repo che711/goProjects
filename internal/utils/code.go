@@ -321,13 +321,13 @@ func Logger() {
     logger = slog.New(handler)
     
     // Уровни логирования
-    logger.Debug("отладочное сообщение")
-    logger.Info("информационное сообщение")
-    logger.Warn("предупреждение")
-    logger.Error("ошибка", "err", "что-то сломалось")
+    logger.Debug("debagger msg")
+    logger.Info("JFYI")
+    logger.Warn("warninig")
+    logger.Error("ошибка", "err", "something broken")
     
     // Глобальный логгер
     slog.SetDefault(logger)
-    slog.Info("использование глобального логгера")
+    slog.Info("Using global logger")
 	
 }
