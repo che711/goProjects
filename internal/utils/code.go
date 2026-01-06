@@ -172,18 +172,28 @@ func CommonWord() {
 }
 
 func SymbolTransform() {
-	var num1 int
-	var num2 int
-	fmt.Scan(&num1, &num2)
-	fmt.Println(string(num1 + num2))
+    var num1 int
+    var num2 int
+    fmt.Scan(&num1, &num2)
+    fmt.Println(num1 + num2) // Prints the numeric sum
 }
 
 func IntToUnicode() {
-	var num_1 int
-	var num_2 int
-	var num_3 int
-	fmt.Scan(&num_1, &num_2, &num_3)
-	fmt.Print(string(num_1),string(num_2), string(num_3))
+    var num_1, num_2, num_3 int
+    
+    // It's helpful to add a prompt so the user knows to type
+    fmt.Println("Enter three Unicode numbers:") 
+    
+    _, err := fmt.Scan(&num_1, &num_2, &num_3)
+    if err != nil {
+        fmt.Println("Error reading input:", err)
+        return
+    }
+
+    // Efficient for many characters
+	runes := []rune{rune(num_1), rune(num_2), rune(num_3)}
+	fmt.Println(string(runes))
+
 }
 
 func BoolsData() {
@@ -283,7 +293,7 @@ func IfElseConditions() {
 }
 
 func Logger() {
-	log.Println("\n\n\tThis is a IfElseConditions function\n")	
+	log.Println("\n\n\tThis is a IfElseConditions function")	
 	log.Printf("\n")	
 	// С флагом для добавления даты/времени
     log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
