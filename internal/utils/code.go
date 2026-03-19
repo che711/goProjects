@@ -3,10 +3,10 @@ package utils
 import (
 	"bufio"
 	"fmt"
-	"os"
-	"unicode/utf8"
 	"log"
 	"log/slog"
+	"os"
+	"unicode/utf8"
 )
 
 func Reverse(s string) string {
@@ -172,25 +172,25 @@ func CommonWord() {
 }
 
 func SymbolTransform() {
-    var num1 int
-    var num2 int
-    fmt.Scan(&num1, &num2)
-    fmt.Println(num1 + num2) // Prints the numeric sum
+	var num1 int
+	var num2 int
+	fmt.Scan(&num1, &num2)
+	fmt.Println(num1 + num2) // Prints the numeric sum
 }
 
 func IntToUnicode() {
-    var num_1, num_2, num_3 int
-    
-    // It's helpful to add a prompt so the user knows to type
-    fmt.Println("Enter three Unicode numbers:") 
-    
-    _, err := fmt.Scan(&num_1, &num_2, &num_3)
-    if err != nil {
-        fmt.Println("Error reading input:", err)
-        return
-    }
+	var num_1, num_2, num_3 int
 
-    // Efficient for many characters
+	// It's helpful to add a prompt so the user knows to type
+	fmt.Println("Enter three Unicode numbers:")
+
+	_, err := fmt.Scan(&num_1, &num_2, &num_3)
+	if err != nil {
+		fmt.Println("Error reading input:", err)
+		return
+	}
+
+	// Efficient for many characters
 	runes := []rune{rune(num_1), rune(num_2), rune(num_3)}
 	fmt.Println(string(runes))
 
@@ -214,10 +214,10 @@ func BoolsData() {
 	fmt.Println("Числа равны?", equal)
 	fmt.Println("Числа не равны?", notEqual)
 	fmt.Println("Первое число больше второго?", firstIsBigger)
-	fmt.Println("Второе число больше первого?", secondIsBigger)	
+	fmt.Println("Второе число больше первого?", secondIsBigger)
 }
 
-func Comparing(){
+func Comparing() {
 	var number1, number2, number3 int
 	fmt.Scan(&number1, &number2, &number3)
 
@@ -232,7 +232,7 @@ func Comparing(){
 	fmt.Println("Первое число самое большое?", isFirstBiggest)
 }
 
-func ComparingTwo(){
+func ComparingTwo() {
 	var number1, number2, number3 int
 	fmt.Scan(&number1, &number2, &number3)
 
@@ -246,33 +246,33 @@ func ComparingTwo(){
 	fmt.Println("Есть одинаковые числа среди трех указанных чисел? ", firstHasPair || secondHasPair)
 }
 
-func CheckingNumber(){
+func CheckingNumber() {
 	var a, b int
 	fmt.Scan(&a, &b)
-		
+
 	var test_a, test_b int
-	test_a = a%2
-	test_b = b%2
+	test_a = a % 2
+	test_b = b % 2
 	fmt.Println(test_a, test_b)
-	
-	var  result_c bool 
-	
+
+	var result_c bool
+
 	result_c = test_a != 1 && test_b != 1
 	fmt.Println(result_c)
 }
 
-func AgeOfTeenager(){
+func AgeOfTeenager() {
 	var age_int int
 	fmt.Scan(&age_int)
 	result := age_int >= 13 && age_int <= 19
 	fmt.Println(result)
 }
 
-func IfConditions(){
+func IfConditions() {
 	var age int
 	fmt.Println("Enter your age:")
 	fmt.Scan(&age)
-	if age <18 {
+	if age < 18 {
 		fmt.Println("Your age less then 18! Don't entry")
 	} else {
 		fmt.Println("Please, continue your journey")
@@ -283,7 +283,7 @@ func IfElseConditions() {
 	var age int
 
 	fmt.Scan(&age)
-	if age <13 {
+	if age < 13 {
 		fmt.Println("You are a little yet")
 	} else if age < 18 {
 		fmt.Println("You're an teenager")
@@ -293,51 +293,50 @@ func IfElseConditions() {
 }
 
 func Logger() {
-	log.Println("\n\n\tThis is a IfElseConditions function")	
-	log.Printf("\n")	
+	log.Printf("\n")
 	// С флагом для добавления даты/времени
-    log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
-    log.Println("Msg with metadata")
-	
-	// Запись в файл
-    file, err := os.OpenFile("app.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
-    if err != nil {
-		log.Fatal(err)
-    }
-    defer file.Close()
-    
-    log.SetOutput(file)
-    log.Println("Запись в файл")
-    
-    // Fatal выводит сообщение и завершает программу
-    // log.Fatal("Критическая ошибка")
-    
-    // Panic выводит сообщение и вызывает panic
-    // log.Panic("Паника")
+	log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
+	log.Println("Msg with metadata")
 
-    // Текстовый вывод
-    logger := slog.New(slog.NewTextHandler(os.Stdout, nil))
-    logger.Info("сообщение", "user", "john", "id", 123)
-    
-    // JSON вывод
-    jsonLogger := slog.New(slog.NewJSONHandler(os.Stdout, nil))
-    jsonLogger.Info("пользователь залогинен", "user", "john", "id", 123)
-    
-    // С настройками
-    handler := slog.NewJSONHandler(os.Stderr, &slog.HandlerOptions{
-        Level:     slog.LevelDebug,
-        AddSource: true,
-    })
-    logger = slog.New(handler)
-    
-    // Уровни логирования
-    logger.Debug("debagger msg")
-    logger.Info("JFYI")
-    logger.Warn("warninig")
-    logger.Error("ошибка", "err", "something broken")
-    
-    // Глобальный логгер
-    slog.SetDefault(logger)
-    slog.Info("Using global logger")
-	
+	// Запись в файл
+	file, err := os.OpenFile("app.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer file.Close()
+
+	log.SetOutput(file)
+	log.Println("Запись в файл")
+
+	// Fatal выводит сообщение и завершает программу
+	// log.Fatal("Критическая ошибка")
+
+	// Panic выводит сообщение и вызывает panic
+	// log.Panic("Паника")
+
+	// Текстовый вывод
+	logger := slog.New(slog.NewTextHandler(os.Stdout, nil))
+	logger.Info("сообщение", "user", "john", "id", 123)
+
+	// JSON вывод
+	jsonLogger := slog.New(slog.NewJSONHandler(os.Stdout, nil))
+	jsonLogger.Info("пользователь залогинен", "user", "john", "id", 123)
+
+	// С настройками
+	handler := slog.NewJSONHandler(os.Stderr, &slog.HandlerOptions{
+		Level:     slog.LevelDebug,
+		AddSource: true,
+	})
+	logger = slog.New(handler)
+
+	// Уровни логирования
+	logger.Debug("debagger msg")
+	logger.Info("JFYI")
+	logger.Warn("warninig")
+	logger.Error("ошибка", "err", "something broken")
+
+	// Глобальный логгер
+	slog.SetDefault(logger)
+	slog.Info("Using global logger")
+
 }
