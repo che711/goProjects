@@ -293,50 +293,57 @@ func IfElseConditions() {
 }
 
 func Logger() {
-	log.Printf("\n")
-	// С флагом для добавления даты/времени
+	// Пример использования стандартного пакета log
+	log.Printf("\n--- Демонстрация стандартного логирования ---\n")
+
+	// Установка флагов для добавления даты, времени и файла
 	log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
-	log.Println("Msg with metadata")
+	log.Println("Сообщение с метаданными")
 
-	// Запись в файл
-	file, err := os.OpenFile("app.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
+	// Логирование в файл
+	logFile, err := os.OpenFile("app.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
 	if err != nil {
-		log.Fatal(err)
+		log.Printf("Ошибка открытия файла лога: %v", err)
+		return
 	}
-	defer file.Close()
+	defer logFile.Close()
 
-	log.SetOutput(file)
+	// Перенаправление вывода в файл
+	originalOutput := log.Writer()
+	log.SetOutput(logFile)
 	log.Println("Запись в файл")
+	// Восстановление вывода
+	log.SetOutput(originalOutput)
 
-	// Fatal выводит сообщение и завершает программу
-	// log.Fatal("Критическая ошибка")
-
-	// Panic выводит сообщение и вызывает panic
-	// log.Panic("Паника")
+	// Примеры использования slog для структурированного логирования
+	fmt.Println("\n--- Демонстрация структурированного логирования (slog) ---")
 
 	// Текстовый вывод
-	logger := slog.New(slog.NewTextHandler(os.Stdout, nil))
-	logger.Info("сообщение", "user", "john", "id", 123)
+	textLogger := slog.New(slog.NewTextHandler(os.Stdout, nil))
+	textLogger.Info("Сообщение", "user", "john", "id", 123)
 
 	// JSON вывод
 	jsonLogger := slog.New(slog.NewJSONHandler(os.Stdout, nil))
-	jsonLogger.Info("пользователь залогинен", "user", "john", "id", 123)
+	jsonLogger.Info("Пользователь залогинен", "user", "john", "id", 123)
 
-	// С настройками
-	handler := slog.NewJSONHandler(os.Stderr, &slog.HandlerOptions{
+	// Логгер с настройками (уровень debug, добавление источника)
+	opts := &slog.HandlerOptions{
 		Level:     slog.LevelDebug,
 		AddSource: true,
-	})
-	logger = slog.New(handler)
+	}
+	handler := slog.NewJSONHandler(os.Stderr, opts)
+	configuredLogger := slog.New(handler)
 
-	// Уровни логирования
-	logger.Debug("debagger msg")
-	logger.Info("JFYI")
-	logger.Warn("warninig")
-	logger.Error("ошибка", "err", "something broken")
+	// Примеры различных уровней логирования
+	configuredLogger.Debug("Отладочное сообщение")
+	configuredLogger.Info("Информационное сообщение")
+	configuredLogger.Warn("Предупреждение")
+	configuredLogger.Error("Ошибка", "err", "что-то сломалось")
 
-	// Глобальный логгер
-	slog.SetDefault(logger)
-	slog.Info("Using global logger")
+	// Установка глобального логгера
+	slog.SetDefault(configuredLogger)
+	slog.Info("Использование глобального логгера")
 
+	// Примечание: В реальном коде избегайте установки глобального логгера,
+	// лучше передавать логгер как зависимость
 }
