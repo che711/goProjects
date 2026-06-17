@@ -4,7 +4,7 @@ on:
   push:
     branches: [ develop, main, logger_branch ]
   pull_request:
-    branches: [ develop, main ]
+    branches: [ develop, main, logger_branch ]
 
 jobs:
   test:
@@ -17,9 +17,7 @@ jobs:
       uses: actions/setup-go@v4
       with:
         go-version: '1.22'
-
-    - name: Download dependencies
-      run: go mod download
+        cache: true
 
     - name: Run tests
       run: go test -v -race -coverprofile=coverage.out ./...
