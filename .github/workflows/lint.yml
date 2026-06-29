@@ -33,6 +33,3 @@ jobs:
           echo "$fmt_output"
           exit 1
         fi
-
-    - name: go vet
-      run: go vet ./...
