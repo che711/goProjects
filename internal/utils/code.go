@@ -222,12 +222,9 @@ func Comparing() {
 	fmt.Scan(&number1, &number2, &number3)
 
 	// объявляем переменную логического типа
-	var isFirstBiggest bool
-
 	// приоритет опрератора && ниже чем у операторов сравнения
 	// поэтому окружать сравниния не требуется
-
-	isFirstBiggest = number1 > number2 && number1 > number3
+	isFirstBiggest := number1 > number2 && number1 > number3
 
 	fmt.Println("Первое число самое большое?", isFirstBiggest)
 }
@@ -250,14 +247,10 @@ func CheckingNumber() {
 	var a, b int
 	fmt.Scan(&a, &b)
 
-	var test_a, test_b int
-	test_a = a % 2
-	test_b = b % 2
+	test_a, test_b := a%2, b%2
 	fmt.Println(test_a, test_b)
 
-	var result_c bool
-
-	result_c = test_a != 1 && test_b != 1
+	result_c := test_a != 1 && test_b != 1
 	fmt.Println(result_c)
 }
 
